@@ -3,9 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { TodosModule } from './todos/todos.module';
-import { UserModule } from './user/user.module';
-import { TodosModule } from './todos/todos.module';
 
 @Module({
   imports: [
@@ -24,8 +21,6 @@ import { TodosModule } from './todos/todos.module';
       }),
       inject: [ConfigService],
     }),
-    TodosModule,
-    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
